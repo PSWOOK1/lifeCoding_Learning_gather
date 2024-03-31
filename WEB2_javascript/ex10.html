@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+  </head>
+  <body>
+    <h1>Object</h1>
+    <h2>Create</h2>
+    <script>
+      var fam = {
+        papa: "ho",
+        mama: "kyung",
+        bro: "hyuk",
+        me: "wook",
+      };
+      //   document.write("papa : " + fam.papa + "<br>");
+
+      fam.angel = "namo";
+      //   document.write("angel : " + fam.angel + "<br>");
+
+      fam["space bar"] = "keyboard";
+      //   document.write("space bar : " + fam["space bar"] + "<br>");
+    </script>
+    <h2>Iterate (반복문)</h2>
+    <script>
+      for (var familyName in fam) {
+        // document.write(key + "<br>");
+        // document.write(fam[key] + "<br>");
+        document.write(familyName + " : " + fam[familyName] + "<br>");
+      }
+    </script>
+    <h2>Property & Method</h2>
+    <script>
+      fam.showAll = function () {
+        for (var familyName in fam) {
+          document.write(familyName + " : " + fam[familyName] + "<br>");
+        }
+
+        for (var familyName in this) {
+          document.write(familyName + " : " + this[familyName] + "<br>");
+        }
+      };
+
+      fam.showAll();
+
+      //   var showAll = function () {
+
+      // };
+
+      //   function showAll() {
+
+      // }
+    </script>
+  </body>
+</html>
